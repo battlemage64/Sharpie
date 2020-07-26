@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+<object Name="bm64_Sharpie" Inherits="Item">
+    <part Name="Examiner" Complexity="1" UnknownDisplayName="{{c|small tube}}"></part>
+	<part Name="NoBreak" />
+    <part Name="Render" Tile="sharpie.png" DisplayName="&amp;BSharpie" ColorString="&amp;c" TileColor="&amp;K" DetailColor="y" RenderString="k" RenderLayer="5"></part>
+    <part Name="Physics" Category="Trinket"></part>
+    <part Name="Description" Short="A small marker. You can use it to write on walls."></part>
+    <part Name="Commerce" Value="0"></part>
+    <part Name="ApplicatorPen"></part>
+    <part Name="Sharpie"></part>
+    <tag Name="Tier" Value="1"></tag>
+  </object>
+
+<object Name="Q Girl" Load="Merge">
+    <inventoryobject Blueprint="bm64_Sharpie" Number="5" />
+  </object>
+</objects>

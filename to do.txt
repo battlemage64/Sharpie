@@ -1,0 +1,5 @@
+add custom color patterns
+special characters
+make changing color of creature/item/wall optional
+-this may require replacing the Graffitied part with a custom part, even on walls
+-possibly change GraffitiedCreatureOrPart to GraffitiedThing/Sharpied/etc
