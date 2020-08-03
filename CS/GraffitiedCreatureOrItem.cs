@@ -7,9 +7,11 @@ using XRL.World.Parts;
 
 namespace XRL.World.Parts {
 	[Serializable]
-	public class GraffitiedCreatureOrItem : IPart {
+	public class GraffitiedThing : IPart {
 
 		public string graffitiText = "";
+
+		public string colorPrefix;
 
 		public override bool SameAs(IPart p) {
 			return false;
@@ -29,7 +31,7 @@ namespace XRL.World.Parts {
 		public override bool HandleEvent(IShortDescriptionEvent E) {
 			if (!string.IsNullOrEmpty(graffitiText)) {
 				E.Base.Append("\n\n").Append("Someone has scrawled a message on this. It reads: \n\n\"").Append("{{")
-					.Append(ParentObject.pRender.GetForegroundColor())
+					.Append(colorPrefix)
 					.Append("|")
 					.Append(graffitiText)
 					.Append("}}")
