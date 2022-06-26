@@ -17,12 +17,12 @@ namespace XRL.World.Parts {
 			string display = "change color";
 			string command = "Change color";
 			char key = 'C';
-			E.AddAction(name, display, command, key, FireOnActor: false, Default: -100);
+			E.AddAction(name, display, command, Key: key, FireOnActor: false, Default: -100);
 			name = "Write";
 			display = "write";
 			command = "Write";
 			key = 'w';
-			E.AddAction(name, display, command, key, FireOnActor: false, Default:100);
+			E.AddAction(name, display, command, Key: key, FireOnActor: false, Default:100);
 			return true;
 		}
 	}
