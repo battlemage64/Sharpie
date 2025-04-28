@@ -24,7 +24,7 @@ namespace XRL.World.Parts {
 					}
 					Cell cell = null;
 					if (E.Actor != null && E.Actor.IsPlayer()) {
-						cell = E.Actor.pPhysics.PickDirection();
+						cell = E.Actor.Physics.PickDirection();
 					}
 				if (cell != null) {
 					bool somethingWritten = false;
@@ -51,7 +51,7 @@ namespace XRL.World.Parts {
 								continue;
 							}
 
-							string text = Popup.AskString(String.Format("What do you want to write on the {0}?", gameObject.DisplayName), "", 999);
+							string text = Popup.AskString(String.Format("What do you want to write on the {0}?", gameObject.DisplayName), "", MaxLength: 999);
 							if (text.Equals("")) continue;
 
 							Regex reg = new Regex("\\\\u[0-9a-fA-F]{4}");
@@ -64,10 +64,10 @@ namespace XRL.World.Parts {
 							);
 							Popup.Show("&yYou write " + "{{" + color + "|" + text + "}}&y on the " + gameObject.DisplayName + ".");
 							if (color == "" || !validColors.Contains(color)) {
-								gameObject.pRender.SetForegroundColor(Crayons.GetRandomColorAll());
+								gameObject.Render.SetForegroundColor(Crayons.GetRandomColorAll());
 							}
 							else {
-								gameObject.pRender.SetForegroundColor(color);
+								gameObject.Render.SetForegroundColor(color);
 							}
 							GraffitiedThing graffiti;
 							if (!gameObject.HasPart(typeof(GraffitiedThing))) {
@@ -80,7 +80,7 @@ namespace XRL.World.Parts {
 							if (color.Length > 1) {
 								graffiti.colorPrefix = color;
                             } else {
-								graffiti.colorPrefix = gameObject.pRender.GetForegroundColor();
+								graffiti.colorPrefix = gameObject.Render.GetForegroundColor();
                             }
 							gameObject.SetIntProperty("HasGraffiti", 1);
 						}
@@ -94,7 +94,7 @@ namespace XRL.World.Parts {
 					E.RequestInterfaceExit();
 				}
 			} else if (E.Command == "Change color") {
-				color = Popup.AskString("Set a color character or pattern (or leave blank for random, or enter E to erase)", "", 50);
+				color = Popup.AskString("Set a color character or pattern (or leave blank for random, or enter E to erase)", "", MaxLength: 50);
 			}
 			return true;
 		}

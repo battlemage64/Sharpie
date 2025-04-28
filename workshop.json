@@ -1,1 +1,8 @@
-{"workshopId":2178955679,"Title":"Sharpie","Description":"This mod adds a Sharpie that can write graffiti on walls, furniture, items, and creatures! You can set its color or make it a random color. You can get it by trading with Q Girl (she has five of them and is willing to share!). You can even use it to change an object's appearance color, like a box of crayons.\n\nThe Sharpie is a 0-weight, 0-cost artifact trinket (it shows up as \"small tube\" before examination). It's currently only obtainable from Q Girl or wishes.\n\nPlanned features:\n-special picture characters (like in randomly-generated graffiti)\n-custom colored text patterns (like in artifacts and some adjectives)\n\nPlease comment any suggestions or bugs!","Tags":"Item,Items,Silly,Caves of Qud,Color,Cosmetic","Visibility":"2","ImagePath":"preview.png"}
+{
+  "WorkshopId": 2178955679,
+  "Title": "Sharpie",
+  "Description": "This mod adds a Sharpie that can write graffiti on walls, furniture, items, and creatures! You can set its color or make it a random color. You can get it by trading with Q Girl (she has five of them and is willing to share!). You can even use it to change an object's appearance color, like a box of crayons.\n\nThe Sharpie is a 0-weight, 0-cost artifact trinket (it shows up as \"weird artifact\" or \"small tube\" before examination). It's currently only obtainable from Q Girl or wishes.\n\nYou can type a Unicode character by typing a backslash and lowercase u, then its 4-digit code. Example: a smiley face is \\u263A. Note that only some characters are supported in CoQ's font.\n\nPlanned features:\n-custom colored text patterns (like in artifacts and some adjectives)\n\nPlease comment any suggestions or bugs!",
+  "Tags": "Item,Items,Silly,Caves of Qud,Color,Cosmetic,Sharpie,Decoration",
+  "Visibility": "2",
+  "ImagePath": "preview.png"
+}
